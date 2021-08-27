@@ -17,9 +17,9 @@ namespace MoodAnalyserProblem
         {
             this.Message = message;
         }
-        public string AnalyseMood(string message)
+        public string AnalyseMood()
         {
-            if (message.Contains("sad", StringComparison.OrdinalIgnoreCase))
+            if (this.Message.Contains("sad", StringComparison.OrdinalIgnoreCase))
             {
                 return "Sad";
             }
@@ -30,11 +30,8 @@ namespace MoodAnalyserProblem
         }
         static void Main(string[] args)
         {
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            Console.WriteLine("Please enter a string !!");
-            string mood = Console.ReadLine();
-            Console.WriteLine(moodAnalyser.AnalyseMood(mood)); 
-           // string mood = moodAnalyser.AnalyseMood("I am very happy today");
+            MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy mood");
+            string mood = moodAnalyser.AnalyseMood();
         }
     }
 }

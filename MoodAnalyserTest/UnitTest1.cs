@@ -16,8 +16,8 @@ namespace MoodAnalyserTest
 
             string message = "I am sad today";
             string expected = "Sad";
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            string mood = moodAnalyser.AnalyseMood(message);
+            MoodAnalyser moodAnalyser = new MoodAnalyser(message);
+            string mood = moodAnalyser.AnalyseMood();
             Assert.AreEqual(expected, mood);
         }
         [Test]
@@ -25,8 +25,8 @@ namespace MoodAnalyserTest
         {
             string message = "I am very Happy today";
             string expected = "Happy";
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            string mood = moodAnalyser.AnalyseMood(message);
+            MoodAnalyser moodAnalyser = new MoodAnalyser(message);
+            string mood = moodAnalyser.AnalyseMood();
             Assert.AreEqual(expected, mood);
         }
     }
