@@ -1,24 +1,28 @@
 ﻿using System;
 
+
 namespace MoodAnalyserProblem
 {
-    class MoodAnalyser
+   public  class MoodAnalyser
     {
         public string AnalyseMood(string message)
         {
             if (message.Contains("sad", StringComparison.OrdinalIgnoreCase))
             {
-                return "Sad Mood";
+                return "Sad";
             }
             else
             {
-                return "Happy Mood";
+                return "Happy ";
             }
         }
         static void Main(string[] args)
         {
             MoodAnalyser moodAnalyser = new MoodAnalyser();
-            string mood = moodAnalyser.AnalyseMood("I am very happy today");
+            Console.WriteLine("Please enter a string");
+            string mood = Console.ReadLine();
+            Console.WriteLine(moodAnalyser.AnalyseMood(mood)); 
+           // string mood = moodAnalyser.AnalyseMood("I am very happy today");
         }
     }
 }
