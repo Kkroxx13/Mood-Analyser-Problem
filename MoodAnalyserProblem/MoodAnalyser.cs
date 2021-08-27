@@ -13,7 +13,7 @@ namespace MoodAnalyserProblem
             }
             else
             {
-                return "Happy ";
+                return "Happy";
             }
         }
         static void Main(string[] args)
