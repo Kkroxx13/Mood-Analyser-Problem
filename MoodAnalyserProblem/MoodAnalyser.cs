@@ -31,7 +31,7 @@ namespace MoodAnalyserProblem
         static void Main(string[] args)
         {
             MoodAnalyser moodAnalyser = new MoodAnalyser();
-            Console.WriteLine("Please enter a string");
+            Console.WriteLine("Please enter a string !!");
             string mood = Console.ReadLine();
             Console.WriteLine(moodAnalyser.AnalyseMood(mood)); 
            // string mood = moodAnalyser.AnalyseMood("I am very happy today");
